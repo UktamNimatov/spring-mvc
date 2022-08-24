@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import uz.epam.springmvc.bean.Login;
 import uz.epam.springmvc.bean.User;
 
 import java.util.Arrays;
@@ -39,13 +40,18 @@ public class HomeController {
         return "register";
     }
 
-    @ModelAttribute("newUser")
-    public User getDefaultUser() {
-        return new User();
-    }
-
-    @ModelAttribute("genderItems")
-    public List<String> getGenderItems() {
-        return Arrays.asList("Male", "Female", "Other");
-    }
+//    @ModelAttribute("newUser")
+//    public User getDefaultUser() {
+//        return new User();
+//    }
+//
+//    @ModelAttribute("genderItems")
+//    public List<String> getGenderItems() {
+//        return Arrays.asList("Male", "Female", "Other");
+//    }
+//
+//    @ModelAttribute("login")
+//    public Login getLogin() {
+//        return new Login();
+//    }
 }

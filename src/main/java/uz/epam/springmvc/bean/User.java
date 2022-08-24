@@ -1,9 +1,14 @@
 package uz.epam.springmvc.bean;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.Date;
 import java.util.Objects;
 import java.util.StringJoiner;
 
@@ -13,16 +18,22 @@ public class User {
     @Id
     private int id;
 
-    @Size(min = 5, message = "Username should be between 5 and 20 characters", max = 20)
+    @Size(min = 5, message = "{username.error}", max = 20)
     private String username;
 
-    @Pattern(regexp = "(()")
+    @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "{password.error}")
     private String password;
-    private String gender;
+
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+
+    @NotNull(message = "Activity cannot be left empty")
     private String activity;
+
+    @NotEmpty(message = "{firstname.error}")
     private String firstName;
     private String lastName;
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
     public int getId() {
         return id;
@@ -48,11 +59,11 @@ public class User {
         this.password = password;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -80,11 +91,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
