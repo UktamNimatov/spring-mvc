@@ -18,10 +18,10 @@
             </div>
             <!-- branding -->
             <ul class="navbar">
-                <li><a href="/home">home</a></li>
-                <li><a href="/goToSearch">search</a></li>
-                <li><a href="/goToLogin">login</a></li>
-                <li><a href="#">linkedin</a></li>
+                <li><a href="/home"><spring:message code="home"/></a></li>
+                <li><a href="/goToLogin"><spring:message code="login"/></a></li>
+                <li><a href="/goToSearch"><spring:message code="search"/></a></li>
+                <li><a href="/redirectToLinkedIn"><spring:message code="linkedIn"/></a></li>
             </ul><!-- navbar -->
             <!-- navbar -->
         </div>
@@ -41,6 +41,9 @@
         </form>
     </div>
 </section>
+<div>
+    <strong>${something}</strong>
+</div>
 <!-- guarantee -->
 <c:if test="${!empty(products)}">
     <section id="products" class="section">

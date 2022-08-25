@@ -18,10 +18,10 @@
 				</div>
 				<!-- branding -->
 				<ul class="navbar">
-					<li><a href="/home">home</a></li>
-					<li><a href="/goToSearch">search</a></li>
-					<li><a href="/goToLogin">login</a></li>
-					<li><a href="">linkedIn</a></li>
+					<li><a href="/home"><spring:message code="home"/></a></li>
+					<li><a href="/goToLogin"><spring:message code="login"/></a></li>
+					<li><a href="/goToSearch"><spring:message code="search"/></a></li>
+					<li><a href="/redirectToLinkedIn"><spring:message code="linkedIn"/></a></li>
 
 				</ul>
 				<!-- navbar -->
