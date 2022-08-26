@@ -314,7 +314,7 @@ em {
 	background-position: center center;
 	background-size: cover;
 	height: 100vh;
-	max-height: auto
+	max-height: 100px
 }
 
 #products .product-list {

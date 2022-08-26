@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>HPlus</title>
 <%--  <link rel="stylesheet" href="css/style.css" type="text/css"/>--%>
-    <link rel="stylesheet" href="<spring:theme code="styleSheet" />" type="text/css"/>
+    <link rel="stylesheet" href="<spring:theme code='styleSheet'/>" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 Sök
@@ -17,10 +17,10 @@ Sök
                 <a href="#home"><img src="images/hpluslogo.svg" alt="Logo - H Plus Sports"></a>
             </div><!-- branding -->
             <ul class="navbar">
-                <li><a href="${pageContext.request.contextPath}/home"><spring:message code="label.home" /></a></li>
-                <li><a href="${pageContext.request.contextPath}/goToLogin"><spring:message code="label.login" /></a></li>
-                <li><a href="${pageContext.request.contextPath}/goToSearch"><spring:message code="label.search" /></a></li>
-                <li><a href="${pageContext.request.contextPath}/redirectToLinkedIn"><spring:message code="label.linkedIn" /></a></li>
+                <li><a href="${pageContext.request.contextPath}/home"><spring:message code="label.home" text="home"/></a></li>
+                <li><a href="${pageContext.request.contextPath}/goToLogin"><spring:message code="label.login" text="login"/></a></li>
+                <li><a href="${pageContext.request.contextPath}/goToSearch"><spring:message code="label.search" text="search"/></a></li>
+                <li><a href="${pageContext.request.contextPath}/redirectToLinkedIn"><spring:message code="label.linkedIn" text="linkedIn"/></a></li>
             </ul><!-- navbar -->
         </div><!-- container nav-elements -->
     </nav>

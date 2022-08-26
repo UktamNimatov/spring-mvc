@@ -108,12 +108,12 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
 
     @Bean
     public LocaleResolver localeResolver() {
-        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-//        CookieLocaleResolver localeResolver = new CookieLocaleResolver();
-//        localeResolver.setDefaultLocale(Locale.US);
-//        localeResolver.setCookieName("lang");
+//        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+        CookieLocaleResolver sessionLocaleResolver = new CookieLocaleResolver();
         sessionLocaleResolver.setDefaultLocale(Locale.US);
-        sessionLocaleResolver.setLocaleAttributeName("locale");
+        sessionLocaleResolver.setCookieName("locale");
+//        sessionLocaleResolver.setDefaultLocale(Locale.US);
+//        sessionLocaleResolver.setLocaleAttributeName("locale");
         return sessionLocaleResolver;
     }
 
